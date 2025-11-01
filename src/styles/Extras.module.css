@@ -1,0 +1,253 @@
+.container {
+  width: 100%;
+  max-width: var(--container, 1200px);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 40%;
+  background: #f194d4;
+  filter: blur(200px);
+  z-index: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.text_m1 {
+  font-size: clamp(24px, 5vw, 36px);
+  color: #1c1447;
+  font-weight: 400;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 5vh;
+  display: flex;
+  gap: 24px;
+  overflow: hidden;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.list li {
+  flex: 0 0 calc(33.33% - 16px);
+  min-width: 280px;
+  cursor: pointer;
+}
+
+@media (max-width: 960px) {
+  .list li {
+    flex: 0 0 calc(50% - 12px);
+    min-width: 260px;
+  }
+}
+
+@media (max-width: 640px) {
+  .list li {
+    flex: 0 0 100%;
+    min-width: auto;
+  }
+}
+
+.card {
+  background-color: #ffffff83;
+  backdrop-filter: blur(10px);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  min-height: 180px;
+  min-width: 360px;
+  max-width: 360px;
+  max-height: 180px;
+  color: white;
+  transition: transform 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 8px 0;
+  color: #1c1447;
+}
+
+.cardDescription {
+  font-size: 1em;
+  color: #1c1447;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.steps {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 10px 0;
+}
+
+.step {
+  font-size: 1.5em;
+  color: #1c1447;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+.step:hover {
+  color: #1c1447;
+}
+
+.active {
+  color: #1c1447;
+  font-weight: bold;
+}
+
+.animateLeft {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animateRight {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(20px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 15px;
+  }
+  .text_m1 {
+    font-size: clamp(20px, 4.5vw, 32px);
+    padding: 1.5vh 0;
+  }
+  .list {
+    gap: 20px;
+    padding: 4vh;
+  }
+  .list li {
+    flex: 0 0 calc(50% - 12px);
+    min-width: 380px !important;
+    max-width: 380px !important;
+  }
+  .card {
+    padding: 16px;
+    min-height: 90px;
+  }
+  .cardTitle {
+    font-size: 1em;
+  }
+  .cardDescription {
+    font-size: 0.85em;
+  }
+  .steps {
+    gap: 12px;
+    margin-top: 30px;
+  }
+  .step {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .background {
+    width: 70%;
+    height: 50%;
+    filter: blur(150px);
+  }
+  .list {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 3vh;
+  }
+  .list li {
+    flex: 0 0 100%;
+    min-width: unset;
+  }
+  .steps {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text_m1 {
+    font-size: clamp(18px, 6vw, 24px);
+  }
+  .list {
+    padding: 2vh;
+  }
+  .card {
+    padding: 12px;
+  }
+  .cardTitle {
+    font-size: 0.95em;
+  }
+  .cardDescription {
+    font-size: 0.8em;
+  }
+  .list li {
+    flex: 0 0 calc(50% - 12px);
+    min-width: 320px !important;
+    max-width: 320px !important;
+  }
+  .steps {
+    margin-top: 20px;
+  }
+  .step {
+    font-size: 1em;
+  }
+}
