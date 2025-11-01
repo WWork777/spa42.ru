@@ -42,7 +42,7 @@ export default function Footer() {
             </a>
             <div className={styles.socialIcons}>
               <Link
-                href="https://api.whatsapp.com/send/?phone=79998887766&text&type=phone_number&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=79844480789&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -54,7 +54,7 @@ export default function Footer() {
                 />
               </Link>
               <Link
-                href="https://t.me/aetherium1"
+                href="https://t.me/an020825"
                 target="_blank"
                 rel="noopener noreferrer"
               >

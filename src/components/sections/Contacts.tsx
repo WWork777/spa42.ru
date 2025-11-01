@@ -23,7 +23,7 @@ export default function Contacts() {
               <p className={styles.contactsTitle}>Мессенджеры</p>
               <div className={styles.icons}>
                 <a
-                  href="https://api.whatsapp.com/send/?phone=79998887766&text&type=phone_number&app_absent=0"
+                  href="https://api.whatsapp.com/send/?phone=79844480789&text&type=phone_number&app_absent=0"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.iconLink}
@@ -31,7 +31,7 @@ export default function Contacts() {
                   <img src="/svg/wa.svg" alt="WhatsApp" className={styles.wa} />
                 </a>
                 <a
-                  href="https://t.me/aetherium1"
+                  href="https://t.me/an020825"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.iconLink}
@@ -42,9 +42,7 @@ export default function Contacts() {
             </div>
           </div>
           <button className={styles.ctaButton}>
-            <span onClick={() => setIsModalOpen(true)}>
-              Закажем такси до салона бесплатно
-            </span>
+            <span onClick={() => setIsModalOpen(true)}>Записаться</span>
           </button>
         </div>
         <div className={styles.mapContainer}>

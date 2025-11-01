@@ -40,7 +40,7 @@ export default function Header() {
               +7 (983) 210-34-33
             </a>
             <Link
-              href="https://t.me/aetherium1"
+              href="https://t.me/an020825"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.social}
@@ -53,7 +53,7 @@ export default function Header() {
               />
             </Link>
             <Link
-              href="https://api.whatsapp.com/send/?phone=79998887766&text&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=79844480789&text&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.social}
@@ -91,7 +91,7 @@ export default function Header() {
 
           <div className={styles.mobile_socials}>
             <Link
-              href="https://t.me/aetherium1"
+              href="https://t.me/an020825"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.social}
@@ -104,7 +104,7 @@ export default function Header() {
               />
             </Link>
             <Link
-              href="https://api.whatsapp.com/send/?phone=79998887766&text&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=79844480789&text&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.social}
