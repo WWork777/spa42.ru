@@ -37,8 +37,8 @@ export default function Footer() {
           </nav>
 
           <div className={styles.contact}>
-            <a href="tel:+7 (983) 210-34-33" className={styles.phone}>
-              +7 (983) 210-34-33
+            <a href="tel:+7 (984) 448-07-89" className={styles.phone}>
+              +7 (984) 448-07-89
             </a>
             <div className={styles.socialIcons}>
               <Link
@@ -54,7 +54,7 @@ export default function Footer() {
                 />
               </Link>
               <Link
-                href="https://t.me/an020825"
+                href="https://t.me/+79844480789"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -36,11 +36,11 @@ export default function Header() {
             </Link>
           </nav>
           <div className={styles.contacts}>
-            <a className={styles.phone} href="tel:+7 (983) 210-34-33">
-              +7 (983) 210-34-33
+            <a className={styles.phone} href="tel:+7 (984) 448-07-89">
+              +7 (984) 448-07-89
             </a>
             <Link
-              href="https://t.me/an020825"
+              href="https://t.me/+79844480789"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.social}
@@ -91,7 +91,7 @@ export default function Header() {
 
           <div className={styles.mobile_socials}>
             <Link
-              href="https://t.me/an020825"
+              href="https://t.me/+79844480789"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.social}
@@ -135,8 +135,8 @@ export default function Header() {
           </nav>
 
           <div className={styles.contacts}>
-            <a className={styles.phone} href="tel:+7 (983) 210-34-33">
-              +7 (983) 210-34-33
+            <a className={styles.phone} href="tel:+7 (984) 448-07-89">
+              +7 (984) 448-07-89
             </a>
           </div>
         </div>

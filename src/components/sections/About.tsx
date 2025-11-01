@@ -1,7 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay, EffectFade } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/effect-fade";
 
 import styles from "@styles/About.module.css";
 
@@ -15,18 +19,6 @@ export default function About() {
     "/images/about/6.png",
     "/images/about/7.png",
   ];
-
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev: number) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide(
-      (prev: number) => (prev - 1 + slides.length) % slides.length
-    );
-  };
 
   return (
     <section id="about" className={styles.section}>
@@ -84,7 +76,7 @@ export default function About() {
               <div className={styles.feature}>
                 <Image
                   src="/images/about/Castle.svg"
-                  alt="qwe"
+                  alt="Конфиденциальность"
                   width={24}
                   height={24}
                 />
@@ -93,7 +85,7 @@ export default function About() {
               <div className={styles.feature}>
                 <Image
                   src="/images/about/slippers.svg"
-                  alt="qwe"
+                  alt="Тапочки"
                   width={24}
                   height={24}
                 />
@@ -104,7 +96,7 @@ export default function About() {
               <div className={styles.feature}>
                 <Image
                   src="/images/about/book.svg"
-                  alt="qwe"
+                  alt="Медкнижки"
                   width={24}
                   height={24}
                 />
@@ -113,7 +105,7 @@ export default function About() {
               <div className={styles.feature}>
                 <Image
                   src="/images/about/taxi.svg"
-                  alt="qwe"
+                  alt="Такси"
                   width={24}
                   height={24}
                 />
@@ -123,38 +115,60 @@ export default function About() {
           </div>
 
           <div className={styles.media}>
-            <Image
-              src={slides[currentSlide]}
-              alt="Джакузи салона"
-              fill
-              sizes="(max-width: 900px) 100vw, 560px"
-              style={{ objectFit: "cover" }}
-            />
+            <Swiper
+              modules={[Navigation, Autoplay, EffectFade]}
+              navigation={{
+                nextEl: `.${styles.swiperButtonNext}`,
+                prevEl: `.${styles.swiperButtonPrev}`,
+              }}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
+              effect="fade"
+              fadeEffect={{ crossFade: true }}
+              loop={true}
+              speed={1000}
+              className={styles.swiper}
+            >
+              {slides.map((slide, index) => (
+                <SwiperSlide key={index} className={styles.swiperSlide}>
+                  <div className={styles.imageContainer}>
+                    <Image
+                      src={slide}
+                      alt={`Фото салона ${index + 1}`}
+                      fill
+                      sizes="(max-width: 900px) 100vw, 560px"
+                      style={{ objectFit: "cover" }}
+                      priority={index === 0}
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
 
-            <button
-              onClick={prevSlide}
-              className={styles.arrowLeft}
-              aria-label="Предыдущее изображение"
-            >
-              <Image
-                src="/images/icons/arrow-left-white.svg"
-                alt="qwe"
-                width={24}
-                height={24}
-              />
-            </button>
-            <button
-              onClick={nextSlide}
-              className={styles.arrowRight}
-              aria-label="Следующее изображение"
-            >
-              <Image
-                src="/images/icons/arrow-right-white.svg"
-                alt="qwe"
-                width={24}
-                height={24}
-              />
-            </button>
+              <button
+                className={`${styles.swiperButtonPrev} ${styles.swiperButton}`}
+                aria-label="Предыдущее изображение"
+              >
+                <Image
+                  src="/images/icons/arrow-left-white.svg"
+                  alt="Назад"
+                  width={24}
+                  height={24}
+                />
+              </button>
+              <button
+                className={`${styles.swiperButtonNext} ${styles.swiperButton}`}
+                aria-label="Следующее изображение"
+              >
+                <Image
+                  src="/images/icons/arrow-right-white.svg"
+                  alt="Вперед"
+                  width={24}
+                  height={24}
+                />
+              </button>
+            </Swiper>
           </div>
         </div>
       </div>

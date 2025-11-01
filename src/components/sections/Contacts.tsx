@@ -2,6 +2,7 @@
 import styles from "@styles/Contacts.module.css";
 import { useState } from "react";
 import ModalTaxi from "../modalTaxi/modalTaxi";
+import Link from "next/link";
 
 export default function Contacts() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,7 +18,9 @@ export default function Contacts() {
             </div>
             <div className={styles.contactsItem}>
               <p className={styles.contactsTitle}>Телефон</p>
-              <p className={styles.address}>+7 (983) 210-34-33</p>
+              <Link href="tel:+7 (984) 448-07-89">
+                <p>+7 (984) 448-07-89</p>
+              </Link>
             </div>
             <div className={styles.contactsItem}>
               <p className={styles.contactsTitle}>Мессенджеры</p>
@@ -31,7 +34,7 @@ export default function Contacts() {
                   <img src="/svg/wa.svg" alt="WhatsApp" className={styles.wa} />
                 </a>
                 <a
-                  href="https://t.me/an020825"
+                  href="https://t.me/+79844480789"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.iconLink}
