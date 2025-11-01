@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://massazhkemerovo.ru/sitemap.xml
+Sitemap: https://spa42.ru/sitemap.xml
