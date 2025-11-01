@@ -35,11 +35,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
-      <Hero
-        title="Спа-салон ЭДЕМ в Кемерово"
-        subTitle="Оазис гармонии и красоты для вашего полного восстановления"
-        fon="/hero/about.jpg"
-      />
+      <Hero title="Спа-салон ЭДЕМ в Кемерово" fon="/hero/about.jpg" />
       <About />
       <FAQ />
       <Contacts />
