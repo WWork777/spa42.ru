@@ -11,7 +11,7 @@ import ModalTaxi from "../modalTaxi/modalTaxi";
 const masters = [
   {
     name: "Джонни",
-    img: "/images/masters/master1.webp",
+    img: "/images/masters/master1.jpg",
     age: 30,
     height: 189,
     weight: 85,
